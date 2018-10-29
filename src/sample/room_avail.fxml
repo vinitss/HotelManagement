@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="875.0" prefWidth="1220.0" style="-fx-background-color: #FF5733;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.RoomAvail">
+    <children>
+        <Button layoutX="69.0" layoutY="49.0" mnemonicParsing="false" onAction="#changeScreenButtonPushed" stylesheets="@white_with_orange.css" text="Home" AnchorPane.leftAnchor="69.0" AnchorPane.topAnchor="44.0" />
+        <StackPane layoutY="103.0" prefHeight="772.0" prefWidth="1220.0" stylesheets="@boot3.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="103.0">
+            <children>
+                <Group StackPane.alignment="CENTER">
+                    <children>
+                        <AnchorPane prefHeight="702.0" prefWidth="822.0" style="-fx-background-color: white;">
+                            <effect>
+                                <DropShadow color="black" offsetX="5.0" offsetY="5.0" />
+                            </effect>
+                     <children>
+                        <TabPane layoutX="14.0" layoutY="14.0" prefHeight="458.0" prefWidth="799.0" tabClosingPolicy="UNAVAILABLE">
+                          <tabs>
+                              <Tab text="Deluxe">
+                                <content>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <AnchorPane layoutX="144.0" layoutY="83.0" prefHeight="200.0" prefWidth="200.0" />
+                                          <ImageView fitHeight="354.0" fitWidth="546.0" layoutX="23.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@h6.jpg" />
+                                             </image>
+                                          </ImageView>
+                                          <Label fx:id="deluxePriceLabel" layoutX="607.0" layoutY="33.0" prefHeight="48.0" prefWidth="166.0" text="Rs 0">
+                                             <font>
+                                                <Font size="28.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="594.0" layoutY="262.0" prefHeight="21.0" prefWidth="187.0" text="Rooms available  :" />
+                                          <ToggleButton fx:id="deluxeButton" layoutX="705.0" layoutY="339.0" mnemonicParsing="false" text="Select" />
+                                          <Label fx:id="deluxeRoomsCount" layoutX="600.0" layoutY="298.0" prefHeight="21.0" prefWidth="148.0" />
+                                          <Label layoutX="652.0" layoutY="99.0" text="per day" />
+                                       </children>
+                                    </AnchorPane>
+                                </content>
+                              </Tab>
+                            <Tab text="Superior">
+                                 <content>
+                                    <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                       <children>
+                                          <ImageView fitHeight="360.0" fitWidth="552.0" layoutX="24.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@h7.jpg" />
+                                             </image>
+                                          </ImageView>
+                                          <Label fx:id="superiorPriceLabel" layoutX="596.0" layoutY="27.0" prefHeight="46.0" prefWidth="165.0" text="Rs 0">
+                                             <font>
+                                                <Font size="28.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="598.0" layoutY="269.0" prefHeight="21.0" prefWidth="187.0" text="Rooms available  :" />
+                                          <ToggleButton fx:id="superiorButton" layoutX="703.0" layoutY="355.0" mnemonicParsing="false" text="Select" />
+                                          <Label fx:id="superiorRoomsCount" layoutX="599.0" layoutY="308.0" prefHeight="21.0" prefWidth="170.0" />
+                                          <Label layoutX="661.0" layoutY="89.0" text="per day" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                            <Tab text="Standard">
+                                 <content>
+                                    <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                       <children>
+                                          <ImageView fitHeight="349.0" fitWidth="525.0" layoutX="31.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@h8.jpg" />
+                                             </image>
+                                          </ImageView>
+                                          <Label fx:id="standardPriceLabel" layoutX="583.0" layoutY="34.0" prefHeight="48.0" prefWidth="172.0" text="Rs 0">
+                                             <font>
+                                                <Font size="28.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="590.0" layoutY="269.0" prefHeight="21.0" prefWidth="187.0" text="Rooms available  :" />
+                                          <ToggleButton fx:id="standardButton" layoutX="697.0" layoutY="351.0" mnemonicParsing="false" text="Select" />
+                                          <Label fx:id="standardRoomsCount" layoutX="588.0" layoutY="304.0" prefHeight="21.0" prefWidth="190.0" />
+                                          <Label layoutX="651.0" layoutY="104.0" text="per day" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                          </tabs>
+                        </TabPane>
+                        <Label alignment="CENTER" layoutX="110.0" layoutY="585.0" prefHeight="39.0" prefWidth="392.0" text="Add Customer">
+                           <font>
+                              <Font size="26.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="bookButton" layoutX="502.0" layoutY="578.0" mnemonicParsing="false" onAction="#bookButtonClicked" stylesheets="@white_with_orange.css" text="Add it" />
+                        <Label fx:id="errorLabel" alignment="CENTER" layoutX="253.0" layoutY="537.0" prefHeight="21.0" prefWidth="345.0" textFill="#f50303" />
+                     </children></AnchorPane>
+                    </children>
+                </Group>
+            </children>
+        </StackPane>
+    </children>
+</AnchorPane>
