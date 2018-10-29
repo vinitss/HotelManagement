@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="875.0" prefWidth="1220.0" style="-fx-background-color: #5B2C6F;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Room">
+    <children>
+        <Button layoutX="69.0" layoutY="49.0" mnemonicParsing="false" onAction="#changeScreenButtonPushed" stylesheets="@white_with_orange.css" text="Home" AnchorPane.leftAnchor="69.0" AnchorPane.topAnchor="44.0" />
+        <StackPane layoutY="103.0" prefHeight="772.0" prefWidth="1220.0" stylesheets="@boot3.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="103.0">
+            <children>
+                <Group StackPane.alignment="CENTER">
+                    <children>
+                        <AnchorPane layoutX="-8.0" layoutY="-8.0" prefHeight="708.0" prefWidth="846.0" style="-fx-background-color: white;">
+                            <effect>
+                                <DropShadow color="black" offsetX="5.0" offsetY="5.0" />
+                            </effect>
+                     <children>
+                        <Label alignment="CENTER" layoutX="330.0" layoutY="27.0" prefHeight="51.0" prefWidth="207.0" style="-fx-font-weight: bold;" text="Book Room" textAlignment="CENTER" AnchorPane.topAnchor="27.0">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Label>
+                        <Line endX="649.0" endY="-10.0" layoutX="150.0" layoutY="99.0" startX="-100.0" startY="-10.0" />
+                        <Line endX="650.0" layoutX="151.0" layoutY="190.0" startX="-100.0" />
+                        <Label alignment="CENTER" layoutX="81.0" layoutY="114.0" prefHeight="43.0" prefWidth="147.0" text="Budget   :" textAlignment="CENTER" AnchorPane.leftAnchor="81.0" AnchorPane.topAnchor="114.0">
+                           <font>
+                              <Font size="27.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="337.0" layoutY="99.0" prefHeight="21.0" prefWidth="124.0" text="Min Budget" />
+                        <Label layoutX="637.0" layoutY="99.0" text="Max Budget" />
+                        <Label alignment="CENTER" layoutX="38.0" layoutY="238.0" prefHeight="39.0" prefWidth="255.0" text="Numer of Rooms  :">
+                           <font>
+                              <Font size="27.0" />
+                           </font>
+                        </Label>
+                        <Line endX="633.0" layoutX="165.0" layoutY="319.0" startX="-114.0" />
+                        <Label alignment="CENTER" layoutX="69.0" layoutY="354.0" prefHeight="43.0" prefWidth="200.0" text="Check in   :" textAlignment="CENTER">
+                           <font>
+                              <Font size="27.0" />
+                           </font>
+                        </Label>
+                        <DatePicker id="checkin" fx:id="checkin" layoutX="310.0" layoutY="360.0" prefHeight="39.0" prefWidth="277.0" promptText="Check in" />
+                        <Label alignment="CENTER" layoutX="69.0" layoutY="409.0" prefHeight="43.0" prefWidth="180.0" text="Check out   :" textAlignment="CENTER">
+                           <font>
+                              <Font size="27.0" />
+                           </font>
+                        </Label>
+                        <DatePicker id="checkout" fx:id="checkout" layoutX="310.0" layoutY="415.0" prefHeight="39.0" prefWidth="277.0" promptText="Check out" />
+                        <Line endX="634.0" layoutX="151.0" layoutY="495.0" startX="-100.0" />
+                        <CheckBox layoutX="91.0" layoutY="528.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="139.0" text="Breakfast">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </CheckBox>
+                        <Button layoutX="273.0" layoutY="603.0" mnemonicParsing="false" onAction="#searchResult" stylesheets="@white_with_orange.css" text="Proceed to select room" />
+                        <ComboBox fx:id="minBudget" layoutX="333.0" layoutY="120.0" prefHeight="31.0" prefWidth="170.0" promptText="5000" />
+                        <ComboBox fx:id="maxBudget" layoutX="600.0" layoutY="120.0" prefHeight="31.0" prefWidth="170.0" promptText="5000" />
+                        <ToggleButton fx:id="bhk1" layoutX="338.0" layoutY="236.0" mnemonicParsing="false" onAction="#setBhk1" prefHeight="43.0" prefWidth="47.0" text="1" />
+                        <ToggleButton fx:id="bhk2" layoutX="418.0" layoutY="238.0" mnemonicParsing="false" onAction="#setBhk2" prefHeight="21.0" prefWidth="47.0" text="2" />
+                        <ToggleButton fx:id="bhk3" layoutX="500.0" layoutY="240.0" mnemonicParsing="false" onAction="#setBhk3" prefHeight="21.0" prefWidth="47.0" text="3" />
+                        <Label fx:id="notice" alignment="CENTER" contentDisplay="CENTER" layoutX="308.0" layoutY="567.0" prefHeight="21.0" prefWidth="248.0" textAlignment="CENTER" textFill="#fc0202" />
+                     </children></AnchorPane>
+                    </children>
+                </Group>
+            </children>
+        </StackPane>
+      <Button layoutX="1016.0" layoutY="44.0" mnemonicParsing="false" onAction="#changeBill" stylesheets="@white_with_orange.css" text="Generate Bill" AnchorPane.rightAnchor="84.0" AnchorPane.topAnchor="44.0" />
+    </children>
+</AnchorPane>
